@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-17T07:29:04.817Z</updated>
+  <updated>2016-01-17T07:33:06.185Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/01/17/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/"/>
     <id>http://yoursite.com/2016/01/17/数据存储/</id>
     <published>2016-01-17T07:08:38.000Z</published>
-    <updated>2016-01-17T07:29:04.817Z</updated>
+    <updated>2016-01-17T07:33:06.185Z</updated>
     <content type="html"><![CDATA[<p><strong>1. 文件存储</strong></p>
 <p>(1）将数据存储到文件中<br>&emsp;&emsp;Context类提供了openFileOutput()方法，第一个参数是文件名（不可以包括路径，所有文件默认保存到/data/data/<package name="">/files/），第二个参数是文件的操作模式，MODE_PRIVATE是默认模式，覆盖文件的内容，MODE_APPEND是在文件中追加内容。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// @param name The name of the file to open; can not contain path</span><br><span class="line">//             separators.</span><br><span class="line">// @param mode Operating mode.  <span class="operator"><span class="keyword">Use</span> <span class="number">0</span> <span class="keyword">or</span> &#123;@<span class="keyword">link</span> #MODE_PRIVATE&#125; <span class="keyword">for</span> the</span><br><span class="line">// <span class="keyword">default</span> operation, &#123;@<span class="keyword">link</span> #MODE_APPEND&#125; <span class="keyword">to</span> append <span class="keyword">to</span> an existing <span class="keyword">file</span>,</span><br><span class="line">// &#123;@<span class="keyword">link</span> #MODE_WORLD_READABLE&#125; <span class="keyword">and</span> &#123;@<span class="keyword">link</span> #MODE_WORLD_WRITEABLE&#125; <span class="keyword">to</span> control</span><br><span class="line">// permissions.</span><br><span class="line">//</span><br><span class="line">// @<span class="keyword">return</span> The resulting &#123;@<span class="keyword">link</span> FileOutputStream&#125;.</span><br><span class="line"><span class="keyword">public</span> abstract FileOutputStream openFileOutput(<span class="keyword">String</span> <span class="keyword">name</span>, <span class="built_in">int</span> <span class="keyword">mode</span>)</span><br><span class="line">   	throws FileNotFoundException;</span></span><br></pre></td></tr></table></figure></package></p>
 <p>&emsp;&emsp;该方法返回FileOutputStream对象，用于构建一个OutputStreamWriter，用于将字符流转化为字节流，拥有8K的内存空间用于转化。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">private</span> <span class="keyword">ByteBuffer </span><span class="keyword">bytes </span>= <span class="keyword">ByteBuffer.allocate(8192);</span></span><br></pre></td></tr></table></figure></p>
@@ -52,6 +52,8 @@
     </summary>
     
       <category term="Android开发" scheme="http://yoursite.com/tags/Android%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
